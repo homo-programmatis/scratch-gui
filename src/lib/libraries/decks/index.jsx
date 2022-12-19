@@ -2026,6 +2026,14 @@ export default {
         hidden: true
     },
 
+    'apitorx-getting-started': {
+        steps: [{
+            video: 'qgu78c5y7d'
+        }],
+        urlId: 'apitorx',
+        hidden: true
+    },
+
     'whats-new': {
         steps: [{
             video: 'mtqymxg0qq'

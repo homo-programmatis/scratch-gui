@@ -29,6 +29,16 @@ import ev3InsetIconURL from './ev3/ev3-small.svg';
 import ev3ConnectionIconURL from './ev3/ev3-hub-illustration.svg';
 import ev3ConnectionSmallIconURL from './ev3/ev3-small.svg';
 
+import apitorxIconURL from './apitorx/apitorx.png';
+import apitorxInsetIconURL from './apitorx/apitorx-small.png';
+import apitorxConnectionIconURL from './apitorx/apitorx-hub-illustration.svg';
+import apitorxConnectionSmallIconURL from './apitorx/apitorx-small.png';
+
+import apitorqIconURL from './apitorq/apitorq.png';
+import apitorqInsetIconURL from './apitorq/apitorq-small.png';
+import apitorqConnectionIconURL from './apitorq/apitorq-hub-illustration.svg';
+import apitorqConnectionSmallIconURL from './apitorq/apitorq-small.png';
+
 import wedo2IconURL from './wedo2/wedo.png'; // TODO: Rename file names to match variable/prop names?
 import wedo2InsetIconURL from './wedo2/wedo-small.svg';
 import wedo2ConnectionIconURL from './wedo2/wedo-illustration.svg';
@@ -225,6 +235,66 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/ev3'
+    },
+    {
+        name: 'Apitor Robot X',
+        extensionId: 'apitorx',
+        collaborator: 'Apitor',
+        iconURL: apitorxIconURL,
+        insetIconURL: apitorxInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Build interactive robots and more."
+                description="Adds blocks specific to Apitor Robot X"
+                id="gui.extension.apitorx.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: apitorxConnectionIconURL,
+        connectionSmallIconURL: apitorxConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting..."
+                description="Make sure your Apitor Robot X is powered on."
+                id="gui.extension.apitorx.connectingMessage"
+            />
+        ),
+        helpLink: 'https://scratch.mit.edu/apitorx'
+    },
+    {
+        name: 'Apitor Robot Q',
+        extensionId: 'apitorq',
+        collaborator: 'Apitor',
+        iconURL: apitorqIconURL,
+        insetIconURL: apitorqInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Build interactive robots and more."
+                description="Adds blocks specific to Apitor Robot Q"
+                id="gui.extension.apitorq.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: apitorqConnectionIconURL,
+        connectionSmallIconURL: apitorqConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting..."
+                description="Make sure your Apitor Robot Q is powered on."
+                id="gui.extension.apitorq.connectingMessage"
+            />
+        ),
+        helpLink: 'https://scratch.mit.edu/apitorq'
     },
     {
         name: 'LEGO BOOST',

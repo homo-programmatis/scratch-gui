@@ -2,6 +2,9 @@ import ScratchStorage from 'scratch-storage';
 
 import defaultProject from './default-project';
 
+// const StorageHelperFetched = require('./storageHelperFetched');
+import StorageHelperFetched from './storageHelperFetched';
+
 /**
  * Wrapper for ScratchStorage which adds default web sources.
  * @todo make this more configurable
@@ -10,6 +13,7 @@ class Storage extends ScratchStorage {
     constructor () {
         super();
         this.cacheDefaultProject();
+        this.addHelper(new StorageHelperFetched(this), 200);
     }
     addOfficialScratchWebStores () {
         this.addWebStore(
@@ -29,7 +33,7 @@ class Storage extends ScratchStorage {
         );
         this.addWebStore(
             [this.AssetType.Sound],
-            asset => `static/extension-assets/scratch3_music/${asset.assetId}.${asset.dataFormat}`
+            asset => `static/assets/${asset.assetId}.${asset.dataFormat}`
         );
     }
     setProjectHost (projectHost) {
@@ -59,7 +63,7 @@ class Storage extends ScratchStorage {
         this.assetHost = assetHost;
     }
     getAssetGetConfig (asset) {
-        return `${this.assetHost}/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;
+        return "static/assets/".concat(asset.assetId, ".").concat(asset.dataFormat);
     }
     getAssetCreateConfig (asset) {
         return {

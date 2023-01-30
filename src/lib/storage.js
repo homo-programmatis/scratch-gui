@@ -59,7 +59,7 @@ class Storage extends ScratchStorage {
         this.assetHost = assetHost;
     }
     getAssetGetConfig (asset) {
-        return `${this.assetHost}/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;
+        return "file:///C:/Exchange/scratch/scratch-desktop/static/assets/".concat(asset.assetId, ".").concat(asset.dataFormat);
     }
     getAssetCreateConfig (asset) {
         return {
